@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/*
+  This @theme block is how Tailwind v4 learns YOUR design tokens.
+  Once a color/font is named here, Tailwind generates real utility
+  classes for it automatically — e.g. --color-anthracite below gives
+  you `bg-anthracite`, `text-anthracite`, `border-anthracite`, etc.
+  No separate config file needed, no manual class-building.
+*/
+@theme {
+  --color-anthracite: #272b36; /* Blue Anthracite — primary text/headings */
+  --color-alaska-gray: #595d66; /* secondary text */
+  --color-cinereous: #a08a81; /* accent / warm neutral */
+  --color-cloudy-sky: #b7b8bb; /* muted backgrounds, dividers */
+  --color-concerto: #d7d7d6; /* light backgrounds only — too low-contrast for text */
+
+  --font-display: "Gagalin", "League Spartan", sans-serif;
+  --font-sans: "League Spartan", system-ui, sans-serif;
+}
+
+body {
+  @apply bg-white text-anthracite font-sans antialiased;
+}
