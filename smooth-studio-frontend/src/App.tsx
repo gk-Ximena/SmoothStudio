@@ -48,7 +48,11 @@ function App() {
   const { employee, error } = useEmployee();
 
   return (
-    <AppLayout employeeName={employee.legalName} active={active} onNavigate={setActive}>
+    <AppLayout
+      employeeName={`${employee.name} ${employee.lastname}`}
+      active={active}
+      onNavigate={setActive}
+    >
       {error && (
         <p className="mb-4 rounded-lg bg-cloudy-sky/20 px-4 py-2 text-sm text-alaska-gray">
           {error}
